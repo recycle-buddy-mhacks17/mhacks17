@@ -6,6 +6,7 @@ import time
 import requests
 import os
 from groq import Groq
+import datetime
 
 
 
@@ -78,17 +79,17 @@ with col2:
     """)
     if st.button("Take a Picture", key="take_picture"):
         st.success("Welcome to RecycleBuddy! Let's start your recycling journey.")
-    txt = st.text_area("Ask our AI", placeholder="Ex: How should I dispose of batteries?")
-         
-    user_input = txt
-    chat_history.append({"role": "user", "content": user_input})
-    response = client.chat.completions.create(model="llama3-70b-8192",
-    messages = chat_history,
-    max_tokens = 100,
-    temperature = 0.2)
-    chat_history.append({"role": "assistant", \
-    "content": response.choices[0].message.content})
-    st.write("Assistant: ", response.choices[0].message.content)
+        
+    user_input = st.text_area("Ask our AI", placeholder="Ex: How should I dispose of batteries?")
+    if st.button("Submit"):
+        chat_history.append({"role": "user", "content": user_input})
+        response = client.chat.completions.create(model="llama3-70b-8192",
+        messages = chat_history,
+        max_tokens = 100,
+        temperature = 0.2)
+        chat_history.append({"role": "assistant", \
+        "content": response.choices[0].message.content})
+        st.write("Assistant: ", response.choices[0].message.content)
 
 # Features section
 st.header(":green[Our Features]")
