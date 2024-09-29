@@ -3,7 +3,7 @@
 ## overview
 This is a github repo
 
-- [Devpost Page} (https://devpost.com/software/720366?ref_content=user-portfolio&ref_feature=in_progress)
+- [Devpost Page] (https://devpost.com/software/720366?ref_content=user-portfolio&ref_feature=in_progress)
 - [MHacks17] (https://www.mhacks.org/)
 
 - ## Contributers
