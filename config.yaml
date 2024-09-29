@@ -1,0 +1,4 @@
+cookie:
+  expiry_days: 30
+  key: abcde  # Replace with your secret key
+  name: recyclebuddy_credentials
