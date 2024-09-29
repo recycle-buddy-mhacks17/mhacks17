@@ -153,8 +153,6 @@ def main():
 
 
     # Features section
-    st.header(":green[Our Features]")
-    col1, col2, col3 = st.columns(3)
 
 
     # Interactive recycling guide
