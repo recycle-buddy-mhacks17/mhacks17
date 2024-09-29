@@ -7,11 +7,10 @@ This is a github repo
 - [MHacks17] (https://www.mhacks.org/)
 
 - ## Contributers
-- [Ziad Sabri] (https://github.com/zsabri91)
 - [Ziad Sabri](https://github.com/zsabri91)
 - [Mohammad Arjamand Ali](https://github.com/Mohammad4844)
-- [Aarya Upadhyay] (https://github.com/AUMichiganFan)
-- [aolman] (https://github.com/aolman)
+- [Aarya Upadhyay](https://github.com/AUMichiganFan)
+- [aolman](https://github.com/aolman)
 
 
 ## inspiration
