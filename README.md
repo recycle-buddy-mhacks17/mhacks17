@@ -1,4 +1,4 @@
-# Recycly Buddy - MHacks17
+# RecyclyBuddy - MHacks17
 
 ## overview
 This is a github repo
@@ -14,10 +14,11 @@ This is a github repo
 
 
 ## inspiration
-As an international students who came from overseas our biggest culture shock in America was how the waste disposal is complicated. This is what inspierd use to make Recycly Buddy
+As international students from overseas, one of our biggest culture shocks in America was the complexity of waste disposal. This inspired us to create RecycleBuddy — An AI-powered solution to help everyone recycle smarter and reduce waste
 
 
 ## What it does
+RecycleBuddy is your personal recycling assistant. With just a quick scan or a simple chat, it helps you figure out the best way to dispose of items. Whether it's sorting plastic, glass, or cardboard, RecycleBuddy provides easy, AI-powered guidance so you never have to guess where your waste goes. It also tracks your efforts and shows you the positive impact you're making on the environment.
 
 
 ## Tech Stack
@@ -34,14 +35,16 @@ As an international students who came from overseas our biggest culture shock in
 
 
 ## Challenges we ran into
+While building RecycleBuddy, we ran into a few challenges. First, setting up user authentication was harder than we thought—it took a lot of effort to make it secure and easy to use. We also had trouble connecting to MongoDB Atlas because we were on Mguest Wi-Fi, which flagged out IP address as unsecure. Also, working as a team we dealt with some merge conflicts in our code that needed a lot of debugging.
 
 
 ## Accomplishments that we're proud of
-
+We're really proud of how we've contributed to helping the environment in a creative way. It feels great to know that our work can make a difference! Along the journey, we learned a lot of new technologies. Streamlit became a key tool for us, and we enjoyed exploring MongoDB Atlas, Roboflow, and Groq. Each of these tools has helped us grow and improve our project.
 
 ## What we learned
 
-## What's next for Recycly Buddy
+## What's next for RecyclyBuddy
+What’s next for RecycleBuddy? We’re excited to introduce a few new features! First, we’ll be adding a token system to reward you for your recycling efforts. We also plan to create a history feature that helps you keep track of what you’ve recycled. Plus, we’re working on a shopping receipt scanner that will show you what items you can dispose of after use—perfect for managing your waste in bulk! And speaking of bulk, we want to make it easier for you to scan multiple items at once. Stay tuned for these exciting updates!
 
 
 
