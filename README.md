@@ -14,6 +14,7 @@ This is a github repo
 
 
 ## inspiration
+As an international students who came from overseas our biggest culture shock in America was how the waste disposal is complicated. This is what inspierd use to make Recycly Buddy
 
 
 ## What it does
