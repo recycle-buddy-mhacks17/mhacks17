@@ -30,8 +30,9 @@ def main():
         "content":
         "You are a helpful assistant. You reply concisely, and you only reply if \
         the prompt is related to recycling. If not, then kindly redirect the \
-        conversation to recycling. Try to use less than 40 words and no numbered \
-        lists."
+        conversation to recycling. You talk about how to recycle the given object.\
+        Try to use less than 40 words and no numbered lists. Do not comment on\
+        how the user describes the object."
         }
 
     chat_history = [system_prompt]
@@ -84,11 +85,10 @@ def main():
         RecycleBuddy uses cutting-edge AI to help you recycle more effectively. 
         Scan any item, and we'll tell you exactly how to recycle it. You can also chat our AI to clear up any confusions you may have!
         """)
-        if st.button("Take a Picture", key="take_picture"):
-            st.success("Welcome to RecycleBuddy! Let's start your recycling journey.")
-            
+        
         user_input = st.text_area("Ask our AI", placeholder="Ex: How should I dispose of batteries?")
-        if st.button("Submit"):
+        submit_button = st.button("Submit Text")
+        if submit_button:
             chat_history.append({"role": "user", "content": user_input})
             response = client.chat.completions.create(model="llama3-70b-8192",
             messages = chat_history,
@@ -96,7 +96,49 @@ def main():
             temperature = 0.2)
             chat_history.append({"role": "assistant", \
             "content": response.choices[0].message.content})
-            st.write("Assistant: ", response.choices[0].message.content)
+            st.success(f"Assistant: {response.choices[0].message.content}")
+        # st.session_state.show_image = False
+            st.session_state.captured_image = None
+            st.session_state.camera_active = False
+        
+        ############################
+        ### CAMERA FUNCTIONALITY ###
+        ############################ 
+        description = ""
+        # Initialize session state for picture and camera activation
+        if "camera_active" not in st.session_state:
+            st.session_state.camera_active = False
+
+        if "captured_image" not in st.session_state:
+            st.session_state.captured_image = None
+
+        # Button to activate the camera
+        if not st.session_state.camera_active:
+            if st.button("Open Camera"):
+                st.session_state.camera_active = True
+
+        # When the camera is active, show the camera input and button to take a picture
+        if st.session_state.camera_active:
+            picture = st.camera_input("Take a picture")
+
+            if picture:
+                st.session_state.captured_image = picture  # Store the picture in session state
+            
+            # Button to save the captured image
+            if st.session_state.captured_image and picture:
+                file_path = save_image_to_folder(st.session_state.captured_image)
+                description = infer_image(file_path)
+                chat_history.append({"role": "user", "content": str(description)})
+                response = client.chat.completions.create(model="llama3-70b-8192",
+                messages = chat_history,
+                max_tokens = 100,
+                temperature = 0.2)
+                chat_history.append({"role": "assistant", \
+                "content": response.choices[0].message.content})
+                st.success(f"Assistant: {response.choices[0].message.content}")
+                description = ""
+            
+
 
     # Features section
     st.header(":green[Our Features]")
@@ -189,6 +231,10 @@ def main():
     tokens = 0
     st.sidebar.write(f"Tokens: 💎 {tokens}")
 
+
+    #st.sidebar.title("Did You Know?")
+    #st.sidebar.info(random.choice(fun_facts))
+
     # Display fun facts with auto-change every n seconds
     placeholder = st.sidebar.empty()
 
@@ -196,6 +242,10 @@ def main():
     for i in range(len(fun_facts)):
         placeholder.write(f"Fun Fact: {fun_facts[i]}")
         time.sleep(6)
+
+
+
+# Footer
 
 if st.session_state["authentication_status"]:
     authenticator.logout('Logout', 'main', key='unique_key')
