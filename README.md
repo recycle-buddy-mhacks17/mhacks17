@@ -10,7 +10,7 @@ RecycleBuddy is an AI-powered app that simplifies recycling. Users can scan item
 - [Ziad Sabri](https://github.com/zsabri91)
 - [Mohammad Arjamand Ali](https://github.com/Mohammad4844)
 - [Aarya Upadhyay](https://github.com/AUMichiganFan)
-- [aolman](https://github.com/aolman)
+- [Aidan Olman](https://github.com/aolman)
 
 
 ## inspiration
