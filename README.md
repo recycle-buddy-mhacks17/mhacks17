@@ -35,7 +35,7 @@ RecycleBuddy is your personal recycling assistant. With just a quick scan or a s
 
 
 ## Challenges we ran into
-While building RecycleBuddy, we ran into a few challenges. First, setting up user authentication was harder than we thought—it took a lot of effort to make it secure and easy to use. We also had trouble connecting to MongoDB Atlas because we were on Mguest Wi-Fi, which flagged out IP address as unsecure. Also, working as a team we dealt with some merge conflicts in our code that needed a lot of debugging.
+While building RecycleBuddy, we ran into a few challenges. First, setting up user authentication was harder than we thought—it took a lot of effort to make it secure and easy to use. We also had trouble connecting to MongoDB Atlas because we were on Mguest Wi-Fi, which flagged out our IP address as unsecure. Also, working as a team we dealt with some merge conflicts in our code that needed a lot of debugging.
 
 
 ## Accomplishments that we're proud of
