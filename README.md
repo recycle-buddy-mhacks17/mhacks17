@@ -6,21 +6,6 @@ RecycleBuddy is an AI-powered app that simplifies recycling. Users can scan item
 - [Devpost Page](https://devpost.com/software/720366?ref_content=user-portfolio&ref_feature=in_progress)
 - [MHacks17](https://www.mhacks.org/)
 
-## Contributers
-- [Ziad Sabri](https://github.com/zsabri91)
-- [Mohammad Arjamand Ali](https://github.com/Mohammad4844)
-- [Aarya Upadhyay](https://github.com/AUMichiganFan)
-- [Aidan Olman](https://github.com/aolman)
-
-
-## Inspiration
-As international students from overseas, one of our biggest culture shocks in America was the complexity of waste disposal. This inspired us to create RecycleBuddy — An AI-powered solution to help everyone recycle smarter and reduce waste
-
-
-## What it does
-RecycleBuddy is your personal recycling assistant. With just a quick scan or a simple chat, it helps you figure out the best way to dispose of items. Whether it's sorting plastic, glass, or cardboard, RecycleBuddy provides easy, AI-powered guidance so you never have to guess where your waste goes. It also tracks your efforts and shows you the positive impact you're making on the environment.
-
-
 ## Tech Stack
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![MongoDB Atlas](https://img.shields.io/badge/MongoDB_Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
@@ -31,6 +16,22 @@ RecycleBuddy is your personal recycling assistant. With just a quick scan or a s
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
+## System Design
+![image](https://github.com/user-attachments/assets/a359d694-a7fb-4f5a-bbd2-5beb9b1dd42c)
+
+
+## Contributers
+- [Ziad Sabri](https://github.com/zsabri91)
+- [Mohammad Arjamand Ali](https://github.com/Mohammad4844)
+- [Aarya Upadhyay](https://github.com/AUMichiganFan)
+- [Aidan Olman](https://github.com/aolman)
+
+## Inspiration
+As international students from overseas, one of our biggest culture shocks in America was the complexity of waste disposal. This inspired us to create RecycleBuddy — An AI-powered solution to help everyone recycle smarter and reduce waste
+
+
+## What it does
+RecycleBuddy is your personal recycling assistant. With just a quick scan or a simple chat, it helps you figure out the best way to dispose of items. Whether it's sorting plastic, glass, or cardboard, RecycleBuddy provides easy, AI-powered guidance so you never have to guess where your waste goes. It also tracks your efforts and shows you the positive impact you're making on the environment.
 
 
 
