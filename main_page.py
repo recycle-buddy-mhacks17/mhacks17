@@ -4,6 +4,8 @@ import requests
 import random
 import time
 import requests
+from helpers import save_image_to_folder, infer_image
+import os
 
 # Set page config
 st.set_page_config(layout="wide", page_title="RecycleBuddy", page_icon="♻️")
@@ -56,8 +58,36 @@ with col2:
     RecycleBuddy uses cutting-edge AI to help you recycle more effectively. 
     Scan any item, and we'll tell you exactly how to recycle it. You can also chat our AI to clear up any confusions you may have!
     """)
-    if st.button("Take a Picture", key="take_picture"):
-        st.success("Welcome to RecycleBuddy! Let's start your recycling journey.")
+    
+    ############################
+    ### CAMERA FUNCTIONALITY ###
+    ############################ 
+
+    # Initialize session state for picture and camera activation
+    if "camera_active" not in st.session_state:
+        st.session_state.camera_active = False
+
+    if "captured_image" not in st.session_state:
+        st.session_state.captured_image = None
+
+    # Button to activate the camera
+    if not st.session_state.camera_active:
+        if st.button("Open Camera"):
+            st.session_state.camera_active = True
+
+    # When the camera is active, show the camera input and button to take a picture
+    if st.session_state.camera_active:
+        picture = st.camera_input("Take a picture")
+
+        if picture:
+            st.session_state.captured_image = picture  # Store the picture in session state
+        
+        # Button to save the captured image
+        if st.session_state.captured_image and picture:
+            file_path = save_image_to_folder(st.session_state.captured_image)
+            description = infer_image(file_path)
+            st.success(description)
+
     if st.button("Chat", key = "recycle_buddy"):
         st.success("Hi! How can I help you today?")
 
