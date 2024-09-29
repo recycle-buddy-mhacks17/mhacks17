@@ -3,6 +3,7 @@ import streamlit as st
 from pymongo import MongoClient
 import streamlit_authenticator_mongo as stauth
 from insert_data import client  # Import the MongoDB client
+import os
 
 # Load YAML configuration
 def load_config():
