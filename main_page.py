@@ -6,6 +6,24 @@ import time
 import requests
 from helpers import save_image_to_folder, infer_image
 import os
+from groq import Groq
+import datetime
+
+client = Groq(
+    api_key = os.environ.get("GROQ_KEY")
+)
+
+# for groq; this gives it an idea of who it is
+system_prompt = {
+    "role": "system",
+    "content":
+    "You are a helpful assistant. You reply concisely, and you only reply if \
+    the prompt is related to recycling. If not, then kindly redirect the \
+    conversation to recycling. Try to use less than 40 words and no numbered \
+    lists."
+    }
+
+chat_history = [system_prompt]
 
 # Set page config
 st.set_page_config(layout="wide", page_title="RecycleBuddy", page_icon="♻️")
@@ -90,6 +108,17 @@ with col2:
 
     if st.button("Chat", key = "recycle_buddy"):
         st.success("Hi! How can I help you today?")
+        
+    user_input = st.text_area("Ask our AI", placeholder="Ex: How should I dispose of batteries?")
+    if st.button("Submit"):
+        chat_history.append({"role": "user", "content": user_input})
+        response = client.chat.completions.create(model="llama3-70b-8192",
+        messages = chat_history,
+        max_tokens = 100,
+        temperature = 0.2)
+        chat_history.append({"role": "assistant", \
+        "content": response.choices[0].message.content})
+        st.write("Assistant: ", response.choices[0].message.content)
 
 # Features section
 st.header(":green[Our Features]")
