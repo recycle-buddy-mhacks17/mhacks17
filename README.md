@@ -4,7 +4,7 @@
 This is a github repo
 
 -  [Devpost Page](https://devpost.com/software/720366?ref_content=user-portfolio&ref_feature=in_progress)
-- [MHacks17](https://www.hackdearborn.org](https://www.mhacks.org/)
+- [MHacks17](https://www.mhacks.org/)
 
 - ## Contributers
 - [Ziad Sabri](https://github.com/zsabri91)
