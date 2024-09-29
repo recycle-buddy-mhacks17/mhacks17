@@ -8,7 +8,7 @@ This is a github repo
 
 - ## Contributers
 - [Ziad Sabri] (https://github.com/zsabri91)
-- [Ziad Sabri]([URL](https://github.com/zsabri91))
+- [Ziad Sabri][https://github.com/zsabri91]
 - [Mohammad Arjamand Ali](https://github.com/Mohammad4844)
 - [Aarya Upadhyay] (https://github.com/AUMichiganFan)
 - [aolman] (https://github.com/aolman)
