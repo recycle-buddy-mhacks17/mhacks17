@@ -1,9 +1,9 @@
 # RecyclBuddy - MHacks17
 
-## overview
-RecycleBuddy is an AI-powered app that simplifies recycling. Users can scan items or chat with the app to learn how to dispose of waste properly. Our goal is to make recycling easier for everyone and promote a cleaner environment.
+## Overview
+RecycleBuddy is an AI-powered app that simplifies recycling. Users can scan items or chat with the app to learn how to dispose of waste properly. Our goal is to make recycling easier for everyone and promote a cleaner environment. Check it out [live](https://mhacks17-a5wfzubdtxqgycxmcmnhbf.streamlit.app/).
 
--  [Devpost Page](https://devpost.com/software/720366?ref_content=user-portfolio&ref_feature=in_progress)
+- [Devpost Page](https://devpost.com/software/720366?ref_content=user-portfolio&ref_feature=in_progress)
 - [MHacks17](https://www.mhacks.org/)
 
 - ## Contributers
@@ -13,7 +13,7 @@ RecycleBuddy is an AI-powered app that simplifies recycling. Users can scan item
 - [Aidan Olman](https://github.com/aolman)
 
 
-## inspiration
+## Inspiration
 As international students from overseas, one of our biggest culture shocks in America was the complexity of waste disposal. This inspired us to create RecycleBuddy — An AI-powered solution to help everyone recycle smarter and reduce waste
 
 
